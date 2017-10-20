@@ -1,6 +1,6 @@
 {
-    "name": "dbonner/presenter",
-    "description": "A Laravel presenter package.",
+    "name": "davidianbonner/presenter",
+    "description": "A Laravel presenter and transformer package.",
     "type": "library",
     "require": {
         "php" : "^7.0",
