@@ -1,8 +1,8 @@
 <?php
 
-namespace DBonner\Presenter\Tests\Fixtures;
+namespace DavidIanBonner\Presenter\Tests\Fixtures;
 
-use DBonner\Presenter\Transformer;
+use DavidIanBonner\Presenter\Transformer;
 
 class TestTransformer extends Transformer
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace DBonner\Presenter;
+namespace DavidIanBonner\Presenter;
 
 use ArrayAccess;
-use DBonner\Presenter\Presentable;
+use DavidIanBonner\Presenter\Presentable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Arrayable;
 
 class Transformer implements ArrayAccess, Arrayable, Jsonable
 {
-    /** @var DBonner\Presenter\Presentable */
+    /** @var DavidIanBonner\Presenter\Presentable */
     protected $object;
 
     /** Resolve requirements from extending class. */
@@ -25,8 +25,8 @@ class Transformer implements ArrayAccess, Arrayable, Jsonable
     /**
      * Set the presentable object.
      *
-     * @param DBonner\Presenter\Presentable $object
-     * @return DBonner\Presenter\Transformer
+     * @param DavidIanBonner\Presenter\Presentable $object
+     * @return DavidIanBonner\Presenter\Transformer
      */
     public function setPresentableObject(Presentable $object) : Transformer
     {
@@ -193,8 +193,8 @@ class Transformer implements ArrayAccess, Arrayable, Jsonable
     /**
      * Return a new instance of the presenter.
      *
-     * @param  DBonner\Presenter\Presentable $object
-     * @return DBonner\Presenter\Transformer
+     * @param  DavidIanBonner\Presenter\Presentable $object
+     * @return DavidIanBonner\Presenter\Transformer
      */
     public static function make(Presentable $object) : Transformer
     {

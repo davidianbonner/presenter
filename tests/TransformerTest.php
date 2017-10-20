@@ -1,6 +1,6 @@
 <?php
 
-namespace DBonner\Presenter\Tests;
+namespace DavidIanBonner\Presenter\Tests;
 
 use Mockery;
 use Exception;
@@ -8,8 +8,8 @@ use ArrayAccess;
 use PHPUnit\Framework\Assert;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Arrayable;
-use DBonner\Presenter\Tests\Fixtures\TestPresentable;
-use DBonner\Presenter\Tests\Fixtures\TestTransformer;
+use DavidIanBonner\Presenter\Tests\Fixtures\TestPresentable;
+use DavidIanBonner\Presenter\Tests\Fixtures\TestTransformer;
 
 class TransformerTest extends TestCase
 {

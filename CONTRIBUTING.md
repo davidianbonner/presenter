@@ -1,22 +1,22 @@
 # Contributing
 
-Contributions are welcome. We accept pull requests on [GitHub](https://github.com/dbonner/presenter).
+Contributions are welcome. We accept pull requests on [GitHub](https://github.com/davidianbonner/presenter).
 
-This project adheres to a [Contributor Code of Conduct](https://github.com/dbonner/presenter/blob/master/CODE_OF_CONDUCT.md). By participating in this project and its community, you are expected to uphold this code.
+This project adheres to a [Contributor Code of Conduct](https://github.com/davidianbonner/presenter/blob/master/CODE_OF_CONDUCT.md). By participating in this project and its community, you are expected to uphold this code.
 
 ## Team members
 
-* [David Bonner](https://github.com/dbonner) - original author and maintainer
+* [David Bonner](https://github.com/davidianbonner) - original author and maintainer
 
 ## Communication Channels
 
 You can find help and discussion in the following places:
 
-* GitHub Issues: <https://github.com/dbonner/presenter/issues>
+* GitHub Issues: <https://github.com/davidianbonner/presenter/issues>
 
 ## Reporting Bugs
 
-Bugs are tracked in our project's [issue tracker](https://github.com/dbonner/presenter/issues).
+Bugs are tracked in our project's [issue tracker](https://github.com/davidianbonner/presenter/issues).
 
 When submitting a bug report, please include enough information for us to reproduce the bug. A good bug report includes the following sections:
 
@@ -35,7 +35,7 @@ If you see a bug report that you'd like to fix, please feel free to do so. Follo
 
 ## Adding New Features
 
-If you have an idea for a new feature, it's a good idea to check out our [issues](https://github.com/dbonner/presenter/issues) or active [pull requests](https://github.com/dbonner/presenter/pulls) first to see if the feature is already being worked on. If not, feel free to submit an issue first, asking whether the feature is beneficial to the project. This will save you from doing a lot of development work only to have your feature rejected. We don't enjoy rejecting your hard work, but some features just don't fit with the goals of the project.
+If you have an idea for a new feature, it's a good idea to check out our [issues](https://github.com/davidianbonner/presenter/issues) or active [pull requests](https://github.com/davidianbonner/presenter/pulls) first to see if the feature is already being worked on. If not, feel free to submit an issue first, asking whether the feature is beneficial to the project. This will save you from doing a lot of development work only to have your feature rejected. We don't enjoy rejecting your hard work, but some features just don't fit with the goals of the project.
 
 When you do begin working on your feature, here are some guidelines to consider:
 

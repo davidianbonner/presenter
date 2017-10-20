@@ -1,11 +1,11 @@
 <?php
 
-namespace DBonner\Presenter\Tests;
+namespace DavidIanBonner\Presenter\Tests;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Response;
-use DBonner\Presenter\Tests\Fixtures\TestModel;
-use DBonner\Presenter\Tests\Fixtures\TestTransformer;
+use DavidIanBonner\Presenter\Tests\Fixtures\TestModel;
+use DavidIanBonner\Presenter\Tests\Fixtures\TestTransformer;
 
 class ResponseMacroTest extends TestCase
 {

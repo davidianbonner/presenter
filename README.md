@@ -9,25 +9,25 @@ In most cases, the data transformation required to output JSON via a REST API is
 Install the package through Composer:
 
 ```bash
-composer require dbonner/presenter
+composer require davidianbonner/presenter
 ```
 
 When composer has completed the install, add the package service provider in the `providers` array in `config/app.php`:
 
 ```php
-DBonner\Presenter\PresenterServiceProvider::class
+DavidIanBonner\Presenter\PresenterServiceProvider::class
 ```
 
 Add the facade to your `aliases` in `config/app.php:
 
 ```php
-'Presenter' => DBonner\Presenter\Facades\Presenter::class,
+'Presenter' => DavidIanBonner\Presenter\Facades\Presenter::class,
 ```
 
 Then publish the config file:
 
 ```
-php artisan vendor:publish --provider="DBonner\Presenter\PresenterServiceProvider"
+php artisan vendor:publish --provider="DavidIanBonner\Presenter\PresenterServiceProvider"
 ```
 
 ## How it works
@@ -61,15 +61,15 @@ Set your presentable => transformer relations in `config/presenter.php`:
 
 #### Transformers
 
-Transformers must extend `DBonner\Presenter\Transformer`. A transformer can utilise mutated attribute methods in a similar manner to eloquent.
+Transformers must extend `DavidIanBonner\Presenter\Transformer`. A transformer can utilise mutated attribute methods in a similar manner to eloquent.
 
 ```php
 <?php
 
 namespace App\Transformers\BookTransformer;
 
-use DBonner\Presenter\Transformer;
-use DBonner\Presenter\Presentable;
+use DavidIanBonner\Presenter\Transformer;
+use DavidIanBonner\Presenter\Presentable;
 
 class BookTransformer extends Transformer
 {
@@ -138,9 +138,9 @@ Collection::present(Book::get());
 
 ## Contributing
 
-Contributions are welcome! Please read [CONTRIBUTING][] for details.
+Contributions are welcome! Please read [CONTRIBUTING](https://github.com/davidianbonner/presenter/blob/master/CONTRIBUTING.md) for details.
 
 
 ## Copyright and license
 
-The dbonner/presenter library is copyright © David Bonner and licensed for use under the MIT License (MIT). Please see [LICENSE][] for more information.
+The davidianbonner/presenter library is copyright © David Bonner and licensed for use under the MIT License (MIT). Please see [LICENSE](https://github.com/davidianbonner/presenter/blob/master/LICENSE) for more information.

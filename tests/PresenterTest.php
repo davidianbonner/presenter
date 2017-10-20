@@ -1,21 +1,21 @@
 <?php
 
-namespace DBonner\Presenter\Tests;
+namespace DavidIanBonner\Presenter\Tests;
 
 use Mockery;
 use ArrayAccess;
-use DBonner\Presenter\Presenter;
 use Illuminate\Support\Collection;
-use DBonner\Presenter\Presentable;
-use DBonner\Presenter\Transformer;
+use DavidIanBonner\Presenter\Presentable;
+use DavidIanBonner\Presenter\Transformer;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Pagination\LengthAwarePaginator;
-use DBonner\Presenter\Tests\Fixtures\TestModel;
-use DBonner\Presenter\Tests\Fixtures\TestPresentable;
-use DBonner\Presenter\Tests\Fixtures\TestTransformer;
-use DBonner\Presenter\Tests\Fixtures\TestRelatedModel;
-use DBonner\Presenter\Facades\Presenter as PresenterFacade;
-use DBonner\Presenter\Tests\Fixtures\TestRelatedTransformer;
+use DavidIanBonner\Presenter\PresentationFactory;
+use DavidIanBonner\Presenter\Tests\Fixtures\TestModel;
+use DavidIanBonner\Presenter\Tests\Fixtures\TestPresentable;
+use DavidIanBonner\Presenter\Tests\Fixtures\TestTransformer;
+use DavidIanBonner\Presenter\Tests\Fixtures\TestRelatedModel;
+use DavidIanBonner\Presenter\Facades\Presenter as PresenterFacade;
+use DavidIanBonner\Presenter\Tests\Fixtures\TestRelatedTransformer;
 
 class PresenterTest extends TestCase
 {
@@ -23,7 +23,7 @@ class PresenterTest extends TestCase
     {
         parent::setUp();
 
-        $this->presenter = app(Presenter::class);
+        $this->presenter = app(PresentationFactory::class);
 
         $this->transformers = [
             TestPresentable::class => TestTransformer::class,
@@ -46,7 +46,7 @@ class PresenterTest extends TestCase
     /** @test */
     function transformers_can_be_added_to_the_presenter()
     {
-        $m = Mockery::mock(Presenter::class, [app()->make(Container::class)])->makePartial();
+        $m = Mockery::mock(PresentationFactory::class, [app()->make(Container::class)])->makePartial();
         $m->pushTransformers($this->transformers);
         $m->pushTransformers(['foo' => 'bar']);
 

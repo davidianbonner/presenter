@@ -1,6 +1,6 @@
 <?php
 
-namespace DBonner\Presenter\Facades;
+namespace DavidIanBonner\Presenter\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -8,6 +8,6 @@ class Presenter extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'dbonner.presenter';
+        return 'davidianbonner.presenter';
     }
 }

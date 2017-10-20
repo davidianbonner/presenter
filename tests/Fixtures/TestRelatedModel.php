@@ -1,8 +1,8 @@
 <?php
 
-namespace DBonner\Presenter\Tests\Fixtures;
+namespace DavidIanBonner\Presenter\Tests\Fixtures;
 
-use DBonner\Presenter\Presentable;
+use DavidIanBonner\Presenter\Presentable;
 use Illuminate\Database\Eloquent\Model;
 
 class TestRelatedModel extends Model implements Presentable

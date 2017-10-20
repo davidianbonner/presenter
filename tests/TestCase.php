@@ -1,17 +1,17 @@
 <?php
 
-namespace DBonner\Presenter\Tests;
+namespace DavidIanBonner\Presenter\Tests;
 
 use Illuminate\Support\Collection;
 use Orchestra\Testbench\TestCase as Orchestra;
-use DBonner\Presenter\PresenterServiceProvider;
+use DavidIanBonner\Presenter\PresenterServiceProvider;
 
 class TestCase extends Orchestra
 {
     protected function getPackageAliases($app)
     {
         return [
-            'Presenter' => \DBonner\Presenter\Facades\Presenter::class
+            'Presenter' => \DavidIanBonner\Presenter\Facades\Presenter::class
         ];
     }
 

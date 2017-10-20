@@ -1,17 +1,17 @@
 <?php
 
-namespace DBonner\Presenter;
+namespace DavidIanBonner\Presenter;
 
 use Traversable;
 use Illuminate\Support\Collection;
-use DBonner\Presenter\Presentable;
-use DBonner\Presenter\Transformer;
+use DavidIanBonner\Presenter\Presentable;
+use DavidIanBonner\Presenter\Transformer;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Pagination\AbstractPaginator;
 use Illuminate\Contracts\Container\Container;
 
-class Presenter
+class PresentationFactory
 {
     /** @var Illuminate\Contracts\Container\Container */
     protected $container;
@@ -126,9 +126,9 @@ class Presenter
     /**
      * Transform the presentable object.
      *
-     * @param  DBonner\Presenter\Presentable  $presentable
-     * @param  string                           $transformer
-     * @return DBonner\Presenter\Transformer
+     * @param  DavidIanBonner\Presenter\Presentable  $presentable
+     * @param  string                                $transformer
+     * @return DavidIanBonner\Presenter\Transformer
      */
     protected function transformPresentable(Presentable $presentable, string $transformer) : Transformer
     {

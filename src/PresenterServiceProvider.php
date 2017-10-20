@@ -1,6 +1,6 @@
 <?php
 
-namespace DBonner\Presenter;
+namespace DavidIanBonner\Presenter;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Collection;
@@ -50,14 +50,14 @@ class PresenterServiceProvider extends ServiceProvider
      */
     protected function registerPresenter(Container $app)
     {
-        $app->singleton('dbonner.presenter', function (Container $app) {
-            return with(new Presenter($app))->pushTransformers(
+        $app->singleton('davidianbonner.presenter', function (Container $app) {
+            return with(new PresentationFactory($app))->pushTransformers(
                 $app['config']->get('presenter.transformers', [])
             );
         });
 
-        $app->bind(Presenter::class, function ($app) {
-            return $app['dbonner.presenter'];
+        $app->bind(PresentationFactory::class, function ($app) {
+            return $app['davidianbonner.presenter'];
         });
     }
 
@@ -71,7 +71,7 @@ class PresenterServiceProvider extends ServiceProvider
     {
         Collection::macro('present', function ($data) {
             return Collection::make($data)->mapWithKeys(function ($value, $key) {
-                return [$key => app('dbonner.presenter')->transform($value)];
+                return [$key => app('davidianbonner.presenter')->transform($value)];
             });
         });
     }

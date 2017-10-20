@@ -1,5 +1,5 @@
 <?php
 
-namespace DBonner\Presenter;
+namespace DavidIanBonner\Presenter;
 
 interface Presentable {}

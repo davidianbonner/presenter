@@ -14,12 +14,12 @@
     },
     "autoload": {
         "psr-4": {
-            "DBonner\\Presenter\\": "src/"
+            "DavidIanBonner\\Presenter\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DBonner\\Presenter\\Tests\\": "tests/"
+            "DavidIanBonner\\Presenter\\Tests\\": "tests/"
         }
     },
     "license": "MIT",
