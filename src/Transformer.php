@@ -3,7 +3,6 @@
 namespace DavidIanBonner\Presenter;
 
 use ArrayAccess;
-use DavidIanBonner\Presenter\Presentable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Arrayable;
 
@@ -13,14 +12,18 @@ class Transformer implements ArrayAccess, Arrayable, Jsonable
     protected $object;
 
     /** Resolve requirements from extending class. */
-    public function __construct() {}
+    public function __construct()
+    {
+    }
 
     /**
      * Boot the presenter.
      *
      * @return void
      */
-    protected function bootTransformer(Presentable $object) {}
+    protected function bootTransformer(Presentable $object)
+    {
+    }
 
     /**
      * Set the presentable object.
@@ -32,6 +35,7 @@ class Transformer implements ArrayAccess, Arrayable, Jsonable
     {
         $this->object = $object;
         $this->bootTransformer($object);
+
         return $this;
     }
 
