@@ -2,6 +2,13 @@
     "name": "davidianbonner/presenter",
     "description": "A Laravel presenter and transformer package.",
     "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Bonner",
+            "email": "david@continuuminteractive.com"
+        }
+    ],
     "require": {
         "php" : "^7.0",
         "illuminate/contracts": "^5.4",
@@ -22,11 +29,11 @@
             "DavidIanBonner\\Presenter\\Tests\\": "tests/"
         }
     },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "David Bonner",
-            "email": "david@continuuminteractive.com"
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DavidIanBonner\\Presenter\\PresenterServiceProvider"
+            ]
         }
-    ]
+    }
 }

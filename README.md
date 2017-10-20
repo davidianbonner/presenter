@@ -15,7 +15,7 @@ Install the package through Composer:
 composer require davidianbonner/presenter
 ```
 
-When composer has completed the install, add the package service provider in the `providers` array in `config/app.php`:
+Laravel 5.5 uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider. However if you are using 5.4, when composer has completed the install, add the package service provider in the `providers` array in `config/app.php`:
 
 ```php
 DavidIanBonner\Presenter\PresenterServiceProvider::class
