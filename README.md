@@ -1,5 +1,8 @@
 # Presenter/Transformer
 
+[![Build Status](https://travis-ci.org/dbonner1987/presenter.svg?branch=analysis-z4EgKn)](https://travis-ci.org/dbonner1987/presenter)
+[![StyleCI](https://styleci.io/repos/107682784/shield?branch=master)](https://styleci.io/repos/107682784)
+
 A simple data presenter/transformer for Laravel applications that can be used with views and JSON.
 
 In most cases, the data transformation required to output JSON via a REST API is the same as the data required in our views. This package prevents having to use transformers for JSON (i.e. with Fractal – great for larger apps and complex transformations) and attribute mutators/a separate presentation layer when returning a view. Whether returning a view or JSON, the data can be presented and transformed using the one class.
