@@ -2,4 +2,6 @@
 
 namespace DavidIanBonner\Presenter;
 
-interface Presentable {}
+interface Presentable
+{
+}

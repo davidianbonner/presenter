@@ -2,12 +2,8 @@
 
 namespace DavidIanBonner\Presenter;
 
-use Traversable;
 use Illuminate\Support\Collection;
-use DavidIanBonner\Presenter\Presentable;
-use DavidIanBonner\Presenter\Transformer;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Pagination\AbstractPaginator;
 use Illuminate\Contracts\Container\Container;
 
@@ -46,7 +42,7 @@ class PresentationFactory
      * Is the item in question an instance of the presentable interface.
      *
      * @param  mixed $item
-     * @return boolean
+     * @return bool
      */
     public function isPresentable($item) : bool
     {
@@ -57,7 +53,7 @@ class PresentationFactory
      * Is there a registered presenter for the item.
      *
      * @param  mixed $item
-     * @return boolean
+     * @return bool
      */
     public function shouldTransform($class) : bool
     {
@@ -89,7 +85,7 @@ class PresentationFactory
      * Is the item iterable?
      *
      * @param  mixed  $item
-     * @return boolean
+     * @return bool
      */
     protected function isIterable($item) : bool
     {
