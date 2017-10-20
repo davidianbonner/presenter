@@ -1,1 +1,9 @@
 preset: laravel
+
+finder:
+  exclude:
+    - "tests"
+  name:
+    - "*.php"
+  not-name:
+    - "*Stub.php"
