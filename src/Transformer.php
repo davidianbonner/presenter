@@ -195,6 +195,16 @@ class Transformer implements ArrayAccess, Arrayable, Jsonable
     }
 
     /**
+     * Cast the transformer to a string.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->toJson();
+    }
+
+    /**
      * Return a new instance of the presenter.
      *
      * @param  DavidIanBonner\Presenter\Presentable $object
