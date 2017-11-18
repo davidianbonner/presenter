@@ -31,7 +31,7 @@ class Transformer implements ArrayAccess, Arrayable, Jsonable
      * @param DavidIanBonner\Presenter\Presentable $object
      * @return DavidIanBonner\Presenter\Transformer
      */
-    public function setPresentableObject(Presentable $object) : Transformer
+    public function setPresentableObject(Presentable $object) : self
     {
         $this->object = $object;
         $this->bootTransformer($object);
@@ -210,7 +210,7 @@ class Transformer implements ArrayAccess, Arrayable, Jsonable
      * @param  DavidIanBonner\Presenter\Presentable $object
      * @return DavidIanBonner\Presenter\Transformer
      */
-    public static function make(Presentable $object) : Transformer
+    public static function make(Presentable $object) : self
     {
         return (new static)->setPresentableObject($object);
     }

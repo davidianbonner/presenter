@@ -84,11 +84,11 @@ class PresenterServiceProvider extends ServiceProvider
      */
     protected function loadResponseMacros(Container $app)
     {
-        Response::macro('present', function ($view, array $data = [], $status = 200, array $headers = []) {
+        Response::macro('present', function ($view, $data = [], $status = 200, array $headers = []) {
             return Response::view($view, Collection::present($data)->all(), $status, $headers);
         });
 
-        JsonResponse::macro('present', function (array $data = [], $status = 200, array $headers = [], $options = 0) {
+        JsonResponse::macro('present', function ($data = [], $status = 200, array $headers = [], $options = 0) {
             return new JsonResponse(Collection::present($data), $status, $headers, $options);
         });
     }
