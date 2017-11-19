@@ -110,9 +110,7 @@ class PresentationFactory
                     $item, $this->getTransformer($presentable, $transformerOverride)
                 );
             }
-        }
-
-        if ($this->isIterable($item)) {
+        } elseif ($this->isIterable($item)) {
             return $this->iterateTransformableArray($item);
         }
 
