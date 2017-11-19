@@ -102,10 +102,6 @@ class PresentationFactory
      */
     public function transform($item, string $transformerOverride = null)
     {
-        if ($this->isIterable($item)) {
-            return $this->iterateTransformableArray($item);
-        }
-
         if ($this->isPresentable($item)) {
             $presentable = get_class($item);
 
@@ -114,6 +110,10 @@ class PresentationFactory
                     $item, $this->getTransformer($presentable, $transformerOverride)
                 );
             }
+        }
+
+        if ($this->isIterable($item)) {
+            return $this->iterateTransformableArray($item);
         }
 
         return $item;
