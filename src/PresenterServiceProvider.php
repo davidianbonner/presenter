@@ -6,6 +6,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Pagination\AbstractPaginator;
 use Illuminate\Contracts\Container\Container;
 
 class PresenterServiceProvider extends ServiceProvider
@@ -70,10 +71,17 @@ class PresenterServiceProvider extends ServiceProvider
     protected function loadCollectionMacros(Container $app)
     {
         Collection::macro('present', function ($data) {
+            if ($data instanceof AbstractPaginator) {
+                $data->setCollection(
+                    collect(app('davidianbonner.presenter')->transform($data->items()))
+                );
+            }
+
             return Collection::make($data)->mapWithKeys(function ($value, $key) {
                 return [$key => app('davidianbonner.presenter')->transform($value)];
             });
         });
+
     }
 
     /**
