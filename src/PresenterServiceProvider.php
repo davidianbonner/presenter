@@ -81,7 +81,6 @@ class PresenterServiceProvider extends ServiceProvider
                 return [$key => app('davidianbonner.presenter')->transform($value)];
             });
         });
-
     }
 
     /**
