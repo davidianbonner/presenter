@@ -1,6 +1,6 @@
 # Presenter/Transformer
 
-[![Build Status](https://travis-ci.org/dbonner1987/presenter.svg?branch=analysis-z4EgKn)](https://travis-ci.org/dbonner1987/presenter)
+[![Build Status](https://travis-ci.org/davidianbonner/presenter.svg?branch=analysis-z4EgKn)](https://travis-ci.org/davidianbonner/presenter)
 [![StyleCI](https://styleci.io/repos/107682784/shield?branch=master)](https://styleci.io/repos/107682784)
 
 A simple data presenter/transformer for Laravel applications that can be used with views and JSON.
