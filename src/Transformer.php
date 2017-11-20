@@ -33,7 +33,7 @@ class Transformer implements ArrayAccess, Arrayable, Jsonable
      */
     public function setPresentableObject(Presentable $object) : self
     {
-        $this->object = $object;
+        $this->object = clone $object;
         $this->bootTransformer($object);
 
         return $this;
