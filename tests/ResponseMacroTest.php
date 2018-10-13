@@ -45,4 +45,16 @@ class ResponseMacroTest extends TestCase
 
         $this->assertEquals('bar_mutated', $json->model->foo);
     }
+
+    /** @test */
+    function it_will_transform_via_the_presenter_helper()
+    {
+        $response = present('test', ['model' => new TestModel], 201, ['X-FOO' => 'bar']);
+
+        $this->assertInstanceOf(TestTransformer::class, $response->original->getData()['model']);
+        $this->assertEquals('bar_mutated', $response->original->getData()['model']->foo);
+        $this->assertEquals('test', $response->original->getName());
+        $this->assertTrue($response->headers->has('X-FOO'));
+        $this->assertEquals(201, $response->getStatusCode());
+    }
 }
