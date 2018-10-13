@@ -5,7 +5,7 @@
 
 A simple data presenter/transformer for Laravel applications that can be used with views and JSON.
 
-In most cases, the data transformation required to output JSON via a REST API is the same as the data required in our views. This package prevents having to use transformers for JSON (i.e. with Fractal – great for larger apps and complex transformations) and attribute mutators/a separate presentation layer when returning a view. Whether returning a view or JSON, the data can be presented and transformed using the one class.
+In most cases, the data transformation required to output JSON via a REST API is the same as the data required in our views. This package prevents having to use transformers for JSON (i.e. with Fractal – great for larger apps and complex transformations) and attribute mutators. Whether returning a view or JSON, the data can be presented and transformed using the one class.
 
 ## Installation
 
@@ -15,7 +15,7 @@ Install the package through Composer:
 composer require davidianbonner/presenter
 ```
 
-Laravel 5.5 uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider. However if you are using 5.4, when composer has completed the install, add the package service provider in the `providers` array in `config/app.php`:
+Laravel 5.5+ uses Package Auto-Discovery which doesn't require you to manually add the ServiceProvider. However if you are using 5.4 or earlier, add the package service provider in the `providers` array in `config/app.php`:
 
 ```php
 DavidIanBonner\Presenter\PresenterServiceProvider::class
@@ -103,7 +103,8 @@ To simplify your code and prevent having to repeat `Present::transform()` for al
 ```php
 use Illuminate\Support\Facades\Response;
 ...
-public function index() {
+public function index()
+{
     // Using the settings above, book will be available in the view
     // as an instance of App\Transformers\BookTransformer
 
@@ -113,6 +114,16 @@ public function index() {
 }
 ```
 
+A helper method is also available for convenience that will sites above the `view` helper.
+
+```php
+public function index()
+{
+    return present('view-name', ['book' => Book::find(1)], $statusCode, $headers);
+}
+```
+
+
 ##### JSON
 
 JSON transformation is handled a little differently from views. `Response::json()` checks if an object implements `Illuminate\Contracts\Support\Jsonable`, if it does, it calls `toJson` on that object. The `toJson` method of the base transformer will call `toArray` and `json_encode` it. `toArray` will attempt to collect the keys from the Presentable object passed to it and attempt to get each of these keys on the transformer which will in turn call any magic methods etc.
@@ -120,7 +131,8 @@ JSON transformation is handled a little differently from views. `Response::json(
 ```php
 use Illuminate\Http\JsonResponse;
 ...
-public function index() {
+public function index()
+{
     // Using the settings above, book will be transformed and
     // built from App\Transformers\BookTransformer
 
