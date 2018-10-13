@@ -22,12 +22,7 @@ class PresenterServiceProvider extends ServiceProvider
             __DIR__.'/../config/presenter.php' => config_path('presenter.php'),
         ]);
 
-        // Handler for view building
-        // Ignore these view variables: 'app', '__env', 'errors'
-        // $this->setComposer($this->app);
-
-        // Set listeners on views
-        // $this->setListener($this->app);
+        require_once __DIR__ . '/helpers.php';
 
         $this->loadCollectionMacros($this->app);
         $this->loadResponseMacros($this->app);
