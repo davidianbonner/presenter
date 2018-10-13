@@ -22,7 +22,7 @@ class PresenterServiceProvider extends ServiceProvider
             __DIR__.'/../config/presenter.php' => config_path('presenter.php'),
         ]);
 
-        require_once __DIR__ . '/helpers.php';
+        require_once __DIR__.'/helpers.php';
 
         $this->loadCollectionMacros($this->app);
         $this->loadResponseMacros($this->app);

@@ -1,6 +1,6 @@
 <?php
 
-if (!function_exists('present')) {
+if (! function_exists('present')) {
     /**
      * Return a view with the data transformed.
      *
