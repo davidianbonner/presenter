@@ -7,3 +7,4 @@ docs
 .env.*
 .env
 phpunit.xml
+.phpunit.result.cache

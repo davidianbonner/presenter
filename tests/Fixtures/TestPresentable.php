@@ -2,6 +2,7 @@
 
 namespace DavidIanBonner\Presenter\Tests\Fixtures;
 
+use Illuminate\Support\Arr;
 use DavidIanBonner\Presenter\Presentable;
 use Illuminate\Contracts\Support\Arrayable;
 
@@ -19,7 +20,7 @@ class TestPresentable implements Presentable, Arrayable
 
     public function __get($key)
     {
-        return array_get($this->items, $key, null);
+        return Arr::get($this->items, $key, null);
     }
 
     public function __isset($key)

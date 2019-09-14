@@ -3,6 +3,7 @@
 namespace DavidIanBonner\Presenter;
 
 use ArrayAccess;
+use Illuminate\Support\Str;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Arrayable;
 
@@ -78,7 +79,7 @@ class Transformer implements ArrayAccess, Arrayable, Jsonable
      */
     public function methodExists($name) : bool
     {
-        return method_exists($this, camel_case($name));
+        return method_exists($this, Str::camel($name));
     }
 
     /**
@@ -89,7 +90,7 @@ class Transformer implements ArrayAccess, Arrayable, Jsonable
      */
     public function getMethod($name)
     {
-        return $this->{camel_case($name)}();
+        return $this->{Str::camel($name)}();
     }
 
     /**

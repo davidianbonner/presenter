@@ -2,6 +2,7 @@
 
 namespace DavidIanBonner\Presenter;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\AbstractPaginator;
@@ -32,7 +33,7 @@ class PresentationFactory
     public function pushTransformers(array $transformers = [])
     {
         $this->transformers = array_merge(
-            $this->transformers, array_wrap($transformers)
+            $this->transformers, Arr::wrap($transformers)
         );
 
         return $this;
